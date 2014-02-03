@@ -1,0 +1,12 @@
+\frametitle {An example: Selecting nouns and verbs for an experiment}
+
+Suppose you need to select nouns and verbs that are 4 phonemes long and have 4-6 letters.
+
+\begin{enumerate}
+\item You can go to www.lexique.org and user the interface to obtain such lists.
+
+\item (better) Download the current database and write a script to select your materials.
+\end{enumerate}
+
+See demo in lexique\_search
+

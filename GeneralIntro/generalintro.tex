@@ -1,0 +1,190 @@
+\documentclass{beamer}
+%\usepackage[T1]{fontenc}
+%\usepackage[utf8]{inputenc}
+\usepackage{qtree}
+\usepackage{amsmath}
+\usepackage{verbatim}
+\usepackage{skak}
+\usepackage{graphicx}
+\usepackage{times}
+
+\usetheme{default}
+\setbeamercovered{highly dynamic}
+
+\newcounter{saveenumi}
+\newcommand{\seti}{\setcounter{saveenumi}{\value{enumi}}}
+\newcommand{\conti}{\setcounter{enumi}{\value{saveenumi}}}
+
+
+\title[Tips and Tricks]
+{The need to automatize tasks}
+\subtitle{}
+\author[Christophe Pallier] % (optional, for multiple authors)
+{Christophe Pallier}
+\institute
+{
+  CNRS\\
+  Unit\'e INSERM-CEA de Neuroimagerie Cognitive\\
+  Gif-sur-Yvette
+}
+\date[17 Juin 2013] % (optional)
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{Table of Contents}
+\tableofcontents[currentsection]
+
+
+\end{frame}
+
+\resetcounteronoverlays{saveenumi}
+
+% \begin{frame}[<+->]
+%   \begin{enumerate}
+%   \item foo
+%   \item bar%
+%     \seti
+%   \end{enumerate}
+% \end{frame}
+
+% \begin{frame}[<+->]
+%   \begin{enumerate}
+%     \conti
+%   \item zip
+%   \item yadda%
+%     \seti
+%   \end{enumerate}
+% \end{frame}
+
+\section{Why?}
+
+\begin{frame}
+\frametitle{Why a workshop on Computer Science tools for Cognitive Science?}
+
+\begin{itemize}
+\item Perform simulations
+\pause
+
+\item Selecte stimuli in databases, or generating them
+\pause
+
+\item Create experimental lists (distribution of conditions, order of trials...)
+\pause
+
+\item Stimulate participants and record their responses
+\pause
+
+\item Analyse Data (Reaction times, EEG, fMRI)
+\pause
+
+\item Generate Reports/publication quality figures
+\pause
+
+\item ??? 
+\end{itemize}
+
+\pause
+
+\begin{centering}
+``Either you are the slave of the computer or the computer is your slave''
+\end{centering}
+\end{frame}
+
+\section{Reproducible Science}
+
+\begin{frame}
+\frametitle{Reproducible Science}
+
+You should strive to make your experiments and analyses reproducible... 
+by others, but also by yourself!
+
+\pause
+
+{ \fontsize{9pt}{11}\selectfont
+
+\begin{itemize}
+\item you should keep track of exactly how you selected your materials
+\item you should keep track of what you did exactly for the analyses
+\item someone else should be able to check what you did, and reproduce it
+\item This is often very difficult to achieve!
+\end{itemize} }
+
+\pause
+Possible strategies:
+
+{ \fontsize{9pt}{11}\selectfont
+
+
+\begin{enumerate}
+\item keep a detailed lab notebook (I only know one person who can do it) 
+\item write computer programs that can entirely reproduce your experiments and your analyses
+\item give up,  hope you have not made mistakes, and will not need to check or rerun the experiment
+\end{enumerate}
+}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Tools for reproducible science}
+
+
+\begin{itemize}
+  \item It is worth learning how to program cleanly! The aim is not simply to write a program that works but a program that can be reread and modified. In the end, you will spend less time in front of the computer
+
+\pause
+
+  \item Programming tools
+
+    \begin{itemize}
+    \item Good ones: Python, R, Matlab ...
+
+    \item Less good ones: Excel, E-prime...
+
+      \begin{itemize}
+      \item impossible to check thouroughly.
+      \item compatibility not assured between successive versions.
+      \item they have their use notheless.
+        
+      \end{itemize}
+    \end{itemize}
+
+\pause
+
+  \item Version control tools (git, mercurial, svn...) allow to 
+    keep track of the history of all files and (b) facilitate collaboration between several people
+  
+\pause
+\item Check lessons on http://software-carpentry.org/v4/index.html
+
+\item {\small Open an account on github.com; create a new repository; install a git client on your computer; clone the repository; work on it, add and commit files, and pull them back to the github repo.}
+
+\end{itemize}
+
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]
+\frametitle{An example: Selecting nouns and verbs for an experiment}
+
+Suppose you need to select nouns and verbs that are 4 phonemes long and have 4-6 letters.
+
+\begin{enumerate}
+\item You can go to www.lexique.org and user the interface to obtain such lists.
+
+\item (better) Download the current database and write a script to select your materials.
+\end{enumerate}
+
+See demo in lexique\_search
+
+\end{frame}
+
+
+
+
+\end{document}
