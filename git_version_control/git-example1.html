@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.8.1: http://docutils.sourceforge.net/" />
+<title>Git basics</title>
+<meta name="author" content="Christophe Pallier &lt;christophe&#64;pallier.org&gt;" />
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7056 2011-06-17 10:50:48Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document" id="git-basics">
+<h1 class="title">Git basics</h1>
+<table class="docinfo" frame="void" rules="none">
+<col class="docinfo-name" />
+<col class="docinfo-content" />
+<tbody valign="top">
+<tr><th class="docinfo-name">Author:</th>
+<td>Christophe Pallier &lt;<a class="reference external" href="mailto:christophe&#64;pallier.org">christophe&#64;pallier.org</a>&gt;</td></tr>
+<tr><th class="docinfo-name">Version:</th>
+<td>0.1 of 2012/08/31</td></tr>
+</tbody>
+</table>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#creating-a-local-repository" id="id1">Creating a local repository</a></li>
+<li><a class="reference internal" href="#adding-files-to-the-local-repository" id="id2">Adding files to the local repository</a></li>
+<li><a class="reference internal" href="#creating-a-snapshot-or-commiting" id="id3">Creating a snapshot, or commiting</a></li>
+<li><a class="reference internal" href="#modifying-the-project" id="id4">Modifying the project</a></li>
+<li><a class="reference internal" href="#renaming-a-file" id="id5">Renaming a file</a></li>
+<li><a class="reference internal" href="#recovering-a-file-deleted-by-accident" id="id6">Recovering a file deleted by accident</a></li>
+<li><a class="reference internal" href="#checking-for-changes" id="id7">Checking for changes</a></li>
+<li><a class="reference internal" href="#faster-commit" id="id8">Faster commit</a></li>
+<li><a class="reference internal" href="#downloading-the-most-recent-changes-from-the-distant-repository" id="id9">Downloading the most recent changes from the distant repository</a></li>
+<li><a class="reference internal" href="#pushing-your-changes-to-the-distant-repository" id="id10">Pushing your changes to the distant repository</a></li>
+</ul>
+</div>
+<!-- 1   Creating a local repository
+2   Adding files to the local repository
+3   Creating a snapshot, or commiting
+4   Modifying the project
+5   Renaming a file
+6   Recovering a file deleted by accident
+7   Checking for changes
+8   Faster commit
+9   Downloading the most recent changes from the distant repository
+10  Pushing your changes to the distant repository -->
+<div class="section" id="creating-a-local-repository">
+<h1><a class="toc-backref" href="#id1">Creating a local repository</a></h1>
+<p>From scratch:</p>
+<pre class="literal-block">
+$ mkdir git-test
+$ cd git-test
+$ git init
+Initialized empty Git repository in /home/pallier/cours/Python/version_control/git-test/.git/
+</pre>
+<p>Importing from an existing project on the Internet:</p>
+<pre class="literal-block">
+$ git clone git clone https://github.com/chrplr/pyepl_examples
+</pre>
+</div>
+<div class="section" id="adding-files-to-the-local-repository">
+<h1><a class="toc-backref" href="#id2">Adding files to the local repository</a></h1>
+<p>The command 'git add' is used to tell git which files it must <em>track</em>:</p>
+<pre class="literal-block">
+$ echo 'essai1' &gt; readme.txt
+$ git add readme.txt
+</pre>
+<p>Interestingly, you can also add whole directories, for example:</p>
+<pre class="literal-block">
+$ git add .
+</pre>
+<p>Note that it is possible to prevent certain files to be tracked (see <a class="reference external" href="https://help.github.com/articles/ignoring-files">https://help.github.com/articles/ignoring-files</a>).</p>
+<p>To check which files are currently being <em>tracked</em> (or <em>staged</em>), use the command git status:</p>
+<pre class="literal-block">
+$ git status
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#   (use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)
+#
+#       new file:   readme.txt
+#
+</pre>
+</div>
+<div class="section" id="creating-a-snapshot-or-commiting">
+<h1><a class="toc-backref" href="#id3">Creating a snapshot, or commiting</a></h1>
+<p>Once you are satisfied with the files in your working directory, you can take a snapshot. This is also called  <em>commiting</em> your changes:</p>
+<pre class="literal-block">
+$ git commit
+[master (root-commit) a7a3a47] First commit
+1 file changed, 1 insertion(+)
+create mode 100644 readme.txt
+</pre>
+</div>
+<div class="section" id="modifying-the-project">
+<h1><a class="toc-backref" href="#id4">Modifying the project</a></h1>
+<p>Let us now modify the file readme.txt in the working directory:</p>
+<pre class="literal-block">
+$ echo 'line2' &gt;readme.txt
+</pre>
+<p>The command git status allows us to compare the state of files in the current directory and in the repository:</p>
+<pre class="literal-block">
+$ git status
+# On branch master
+# Changes not staged for commit:
+#   (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+#   (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)
+#
+#       modified:   readme.txt
+#
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+$ git add readme.txt
+$ git status
+# On branch master
+# Changes to be committed:
+#   (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)
+#
+#       modified:   readme.txt
+#
+</pre>
+<p>Let us create a new file, readme2.txt:</p>
+<pre class="literal-block">
+$ echo 'trial2' &gt;readme2.txt
+$ ls
+readme2.txt  readme.txt
+$ git status
+# On branch master
+# Changes to be committed:
+#   (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)
+#
+#       modified:   readme.txt
+#
+# Untracked files:
+#   (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+#
+#       readme2.txt
+</pre>
+<p>We now add readme2.txt to the repository:</p>
+<pre class="literal-block">
+$ git add readme2.txt
+$ git commit
+[master a7e25a1] First revision; added readme2.txt
+2 files changed, 2 insertions(+), 1 deletion(-)
+create mode 100644 readme2.txt
+</pre>
+<p>Let us consult the history of the project:</p>
+<pre class="literal-block">
+$ git log
+commit a7e25a158ce52a75c62381420f7dc375de631b1b
+Author: Christophe Pallier &lt;christophe&#64;pallier.org&gt;
+Date:   Mon Aug 27 10:49:54 2012 +0200
+
+    First revision; added readme2.txt
+
+commit a7a3a47edfae9d7c720356b691000a81ded73906
+Author: Christophe Pallier &lt;christophe&#64;pallier.org&gt;
+Date:   Mon Aug 27 10:47:32 2012 +0200
+
+    First commit
+
+
+
+$ git status
+# On branch master
+nothing to commit (working directory clean)
+</pre>
+</div>
+<div class="section" id="renaming-a-file">
+<h1><a class="toc-backref" href="#id5">Renaming a file</a></h1>
+<p>To rename a tracked file, you should use git mv rather then just mv:</p>
+<blockquote>
+$ git mv file.ori file.new</blockquote>
+</div>
+<div class="section" id="recovering-a-file-deleted-by-accident">
+<h1><a class="toc-backref" href="#id6">Recovering a file deleted by accident</a></h1>
+<p>Let us delete readme2.txt &quot;by accident&quot;:</p>
+<pre class="literal-block">
+$ rm readme2.txt # oops
+$ ls
+readme.txt
+$ git status
+# On branch master
+# Changes not staged for commit:
+#   (use &quot;git add/rm &lt;file&gt;...&quot; to update what will be committed)
+#   (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)
+#
+#       deleted:    readme2.txt
+#
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+</pre>
+<p>To recover it:</p>
+<pre class="literal-block">
+$ git checkout -- readme2.txt
+$ ls
+readme2.txt  readme.txt
+$ cat readme2.txt
+trial2
+</pre>
+</div>
+<div class="section" id="checking-for-changes">
+<h1><a class="toc-backref" href="#id7">Checking for changes</a></h1>
+<p>Let us now modify readme2.txt and then compare the file in the current directory from the ones in the last commit:</p>
+<pre class="literal-block">
+$ echo 'line2 of 2' &gt; readme2.txt
+$ git diff
+diff --git a/readme2.txt b/readme2.txt
+index 33d1e15..e361691 100644
+--- a/readme2.txt
++++ b/readme2.txt
+&#64;&#64; -1 +1 &#64;&#64;
+-trial2
++line2 of 2
+$ git status
+# On branch master
+# Changes not staged for commit:
+#   (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+#   (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)
+#
+#       modified:   readme2.txt
+#
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+</pre>
+</div>
+<div class="section" id="faster-commit">
+<h1><a class="toc-backref" href="#id8">Faster commit</a></h1>
+<p>The command 'git commit -a' performs both a 'git add' and a 'git commit':</p>
+<pre class="literal-block">
+$ git commit -a
+[master a74359e] Second revision
+1 file changed, 1 insertion(+), 1 deletion(-)
+$ git log
+commit a74359e148aff0c369b6ddd482d0fbe0e7ad93ab
+Author: Christophe Pallier &lt;christophe&#64;pallier.org&gt;
+Date:   Mon Aug 27 10:52:50 2012 +0200
+
+    Second revision
+
+commit a7e25a158ce52a75c62381420f7dc375de631b1b
+Author: Christophe Pallier &lt;christophe&#64;pallier.org&gt;
+Date:   Mon Aug 27 10:49:54 2012 +0200
+
+    First revision; added readme2.txt
+
+commit a7a3a47edfae9d7c720356b691000a81ded73906
+Author: Christophe Pallier &lt;christophe&#64;pallier.org&gt;
+Date:   Mon Aug 27 10:47:32 2012 +0200
+
+    First commit
+</pre>
+</div>
+<div class="section" id="downloading-the-most-recent-changes-from-the-distant-repository">
+<h1><a class="toc-backref" href="#id9">Downloading the most recent changes from the distant repository</a></h1>
+<p>If you imported your repository from the internet with 'git clone', you can import the recent changes with:</p>
+<pre class="literal-block">
+$ git pull
+</pre>
+</div>
+<div class="section" id="pushing-your-changes-to-the-distant-repository">
+<h1><a class="toc-backref" href="#id10">Pushing your changes to the distant repository</a></h1>
+<p>You can send your modified repository (after commiting) to the original internet repository:</p>
+<pre class="literal-block">
+$ git push
+</pre>
+</div>
+</div>
+</body>
+</html>

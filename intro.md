@@ -1,0 +1,520 @@
+\documentclass{beamer}
+%\usepackage[T1]{fontenc}
+%\usepackage[utf8]{inputenc}
+\usepackage{qtree}
+\usepackage{amsmath}
+\usepackage{verbatim}
+\usepackage{skak}
+\usepackage{graphicx}
+\usepackage{times}
+
+\usetheme{default}
+\setbeamercovered{highly dynamic}
+
+\newcounter{saveenumi}
+\newcommand{\seti}{\setcounter{saveenumi}{\value{enumi}}}
+\newcommand{\conti}{\setcounter{enumi}{\value{saveenumi}}}
+
+
+\title[Tips and Tricks]
+{Tips and Tricks for Ph.D. students}
+\subtitle{}
+\author[Christophe Pallier] % (optional, for multiple authors)
+{Christophe Pallier}
+\institute
+{
+  CNRS\\
+  Unit\'e INSERM-CEA de Neuroimagerie Cognitive\\
+  Gif-sur-Yvette
+}
+\date[17 Juin 2013] % (optional)
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{Table of Contents}
+\tableofcontents[currentsection]
+
+
+\end{frame}
+
+\resetcounteronoverlays{saveenumi}
+
+% \begin{frame}[<+->]
+%   \begin{enumerate}
+%   \item foo
+%   \item bar%
+%     \seti
+%   \end{enumerate}
+% \end{frame}
+
+% \begin{frame}[<+->]
+%   \begin{enumerate}
+%     \conti
+%   \item zip
+%   \item yadda%
+%     \seti
+%   \end{enumerate}
+% \end{frame}
+
+
+
+\section{Reproducible Science}
+
+\begin{frame}
+\frametitle{Reproducible Science}
+
+You should strive to make your experiments and analyses reproducible... 
+by others, but also by yourself!
+
+\pause
+
+{ \fontsize{9pt}{11}\selectfont
+
+\begin{itemize}
+\item you should keep track of exactly how you selected your materials
+\item you should keep track of what you did exactly for the analyses
+\item someone else should be able to check what you did, and reproduce it
+\item This is often very difficult to achieve!
+\end{itemize} }
+
+\pause
+Possible strategies:
+
+{ \fontsize{9pt}{11}\selectfont
+
+
+\begin{enumerate}
+\item keep a detailed lab notebook (I only know one person who can do it) 
+\item write computer programs all the processing pipelines
+\item give up,  hope you have not made mistakes, and will not need to check or rerun the experiment
+\end{enumerate}
+}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Tools for reproducible science}
+
+
+\begin{itemize}
+  \item It is worth learning how to program cleanly! . The aim is notsimply to write a program that works but a program that can be reread and modified. In the end, you will spend less time in front of the computer
+
+\pause
+
+  \item Programming tools
+
+    \begin{itemize}
+    \item Good ones: Python, R, Matlab ...
+
+    \item Bad ones: Excel, E-prime...
+
+      \begin{itemize}
+      \item impossible to check thouroughly.
+      \item compatibility not assured between successive versions.
+      \item it is not impossible to make good use of Excel and Eprime
+        
+      \end{itemize}
+    \end{itemize}
+
+\pause
+
+  \item Version control tools (svn, git, mercurial,...)
+
+    \begin{itemize}
+    \item keep track of the history of a files (all previous versions)
+    \item allow to collaborate between several people
+    \end{itemize}
+
+  \item Suggested site ``Software Carpentry''
+
+\end{itemize}
+
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]
+\frametitle{Selecting materials from Lexique for an experiment}
+
+You should not use Lexique's web interface but download the current database and write a script to select your materials.
+
+See demo in lexique\_search
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Data analysis with R}
+
+\centering
+\begin{tabular}{cc}
+\textbf{\textsf{Left Hemisphere}} & \textbf{\textsf{Right Hemisphere}} \\
+\multicolumn{2}{l}{\textbf{\textsf{Musicians}}} \\
+
+\quad \includegraphics[width=0.4\textwidth]{musicians_L_s2.pdf}  &
+\includegraphics[width=0.4\textwidth]{musicians_R_s2.pdf} \\
+	
+\multicolumn{2}{l}{\textbf{\textsf{Non-Musicians}}} \\
+
+\quad \includegraphics[width=0.4\textwidth]{non_musicians_L_s2.pdf}  &
+\includegraphics[width=0.4\textwidth]{non_musicians_R_legend_s2.pdf} \\
+									
+\end{tabular}
+
+{\footnotesize Amplitudes of the constituent size effect}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Beyond p-values!!!}
+
+``Certain journals present tables of p-values (or even worse, F-statistics, degrees of freedom and associated p-values)'' Gerald van Belle \emph{Statistical rules of thumb} Wiley.
+
+Rule of thumb: Show your data! Report your results with estimates of effects and the associated confidence intervals.
+
+
+\vspace*{2cm}
+
+See also G. Loftus (1996) Psychology will be a Much Better Science
+When We Change the Way We Analyze Data. \emph{Current directions in Psychological Science}.
+
+\end{frame}
+
+\begin{frame}
+\frametitle{One of the problem with significance tests}
+
+{\footnotesize (from Gelmann \& Stern (2005). The difference between ``significant'' and ``not significant'' is not itself statistically significant.)}
+
+\vspace*{12pt}
+
+Consider two independent studies estimating the same effect:
+
+\quad  $\delta_1 = 25 \pm 10$ ($p<.01$)
+
+\quad  $\delta_2 = 10 \pm 10$ ($p>.10$)
+
+\vspace*{6pt}
+
+  It would be tempting to conclude that there is a large difference
+  between the two studies. However, the difference ($15 \pm 14$) is not
+  even close to being statistically significant.
+
+\vspace*{6pt}
+
+\pause
+  Now imagine a third replication:
+
+\quad  $\delta_3 = 2.5 \pm 1.0$ ($p<.01$)
+
+  This third study attains the same significance level as the first
+  study, yet the difference between the two is itself also
+  significant!
+
+
+
+
+\end{frame}
+
+
+
+
+\section{Writing}
+
+
+\begin{frame}[<+->]
+\frametitle{Writing}
+
+\begin{itemize}
+
+\item Writing is a matter of successive refinement:
+
+To write something, you must first write something dirty and the clean it.
+You should write a first draft, a second draft,... to obtain the final version.
+
+\item For most people, writing is very difficult. For me, I find it easier if I can work *continuously*. I have a huge cost of starting again.
+
+\item For the PhD, I recommend to start writing 1 year before the deadline.
+
+\item I find PhD manuscripts based on papers frustrating (even if I recognize it is efficient)
+
+\item peril of perfectionism
+
+\item learn touch-typing (two persons I know who did it: Stan Dehaene \& Anne Christophe) 
+
+\end{itemize}  
+
+\end{frame}
+
+
+\begin{frame}[<+->]
+\frametitle{Tools for writing}
+
+\begin{quote}
+``Linguistics is cheap: you just need a pen and an eraser. Philosophy is even cheaper: you do not need the eraser''
+\end{quote}
+
+We, psychologists, need more technology...
+
+Word or \LaTeX{}? That is the question...
+
+My reasons to use \LaTeX{}:
+
+\begin{itemize}
+\item  very bad experiences with Word/OpenOffice (crashes, bugs). Never lost work with LaTeX
+
+\item  produces tidy complex documents with typically less work than Word (if one refrains from customizing)
+
+\item  allows one to automatically generate documents (particularily useful for graphics)
+
+\item drawback: like programming: you have to learn a language.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{LaTeX example 1: syntactic trees}
+\fontsize{6pt}{7.2}\selectfont
+
+\Tree [.IP [.Adjunct 
+              Even
+              [.CP 
+               [.C if ]  
+               [.IP 
+                 [.DP [.D the ] [.NP$_1$ kids ]]
+                 [.VP [.V spoke ] [.Adv loudly ]]
+               ]]] 
+            [.IP 
+                [.DP [.D their ] [.NP$_2$ parents ]] 
+                [.VP slept ]]]
+
+\vspace*{12pt}
+\hrule
+
+\begin{verbatim}
+\Tree [.IP [.Adjunct  Even [.CP 
+               [.C if ]  
+               [.IP [.DP [.D the ] [.NP_1 kids ]]
+                    [.VP [.V spoke ] [.Adv loudly ]]]]] 
+            [.IP 
+                [.DP [.D their ] [.NP_2 parents ]] 
+                [.VP slept ]]]
+\end{verbatim}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{LaTeX example 2}
+
+\newenvironment{bcases}
+  {\left\lbrace\begin{aligned}}
+  {\end{aligned}\right\rbrace}
+
+\centering 
+
+Even if the 
+$\begin{bcases}
+\mbox{kids}\\
+\mbox{naughty kids}\\
+\mbox{very naughty kids}\\
+\end{bcases}$
+spoke loudly, ...
+
+\vspace*{1cm}
+\hrule
+
+\fontsize{8pt}{10}\selectfont
+
+
+\begin{verbatim}
+
+Even if the $\begin{bcases}
+   \mbox{kids}              \\
+   \mbox{naughty kids}      \\
+   \mbox{very naughty kids} \\
+\end{bcases}$ spoke loudly, ...
+
+\newenvironment{bcases}
+  {\left\lbrace\begin{aligned}}
+  {\end{aligned}\right\rbrace}
+
+\end{verbatim}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{LaTeX example 3}
+
+\begin{center}
+\includegraphics[width=0.5\textwidth]{chess.png}
+\end{center}
+
+\vspace*{1cm}
+
+\hrule
+
+\fontsize{6pt}{7}\selectfont
+
+The code uses the well-established Forsyth-Edwards Notation:
+
+\begin{verbatim}
+\fenboard{r5k1/1b1p1ppp/p7/1p1Q4/2p1r3/PP4Pq/BBP2b1P/R4R1K w - - 0 20}
+\end{verbatim}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{The ideal PhD}
+
+\begin{frame}[<+->]
+\frametitle{My point of view about the ideal  PhD}
+
+\addtolength{\itemsep}{2\baselineskip}
+
+\begin{enumerate}
+\item A PhD Candidate is not a Research Assistant.
+
+  {\small 
+    It should not even be called a ``student''. 
+
+    It is a young researcher who still has to acquire some technical
+    and scientific knowledge, but who should already have the mindset
+    of a researcher (curiosity and rational thinking)}
+
+\item ``Directeur de th\`ese'' vs. ``PhD advisor''.
+
+I see my role as:
+
+  {\small
+  \begin{itemize}
+  \item provides the PhD with the means to perform the research
+  \item provide intellectual guidance and councelling
+  \item show how to do things.
+  \end{itemize}
+  }
+\seti
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{My point of view about the ideal  PhD}
+
+\begin{enumerate}
+\conti
+\item  What I expect from the PhD ``student'':
+
+  {\small
+  \begin{itemize}
+  \item the student should progressively become the ``master'' of the project.
+  \item s/he should think by herself/himself. We should have two-way
+    exchanges and become colleagues.
+  \item read the litterature. know what s/he knows and what s/he does
+    not know.
+  \item report  when one is blocked.
+  \end{itemize}
+  }
+
+\pause
+
+\item A PhD can mean:  
+
+  {\small 
+  \begin{itemize}
+  \item 3 years of quasi total freedom to investigate a question that
+    interest you (this was the case in Jacques Mehler's lab) 
+  \item 3 years of painful work if you do not understand/like the
+    topic, are obsessed with getting results, etc...
+  \end{itemize}
+  }
+
+\end{enumerate}
+ 
+\end{frame}
+
+\begin{frame}{If you need to improve your work organization}
+\frametitle{}
+
+If you feel overwhelmed and inefficient; if the stress in front of the
+many takss is paralyzing you, offer yourself some useful
+procrastination:
+
+\begin{itemize}
+
+\item Getting Things Done (GTD): Getting Things Done: The Art of
+    Stress-Free Productivity
+
+\item Zen to done (ZTD): The Ultimate Simple Productivity
+    System
+
+\item Learn about \textbf{Mind Mapping} (Note-taking that maps out your ideas)
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{On the importance of being a bilingual in Science}
+
+\begin{center}
+\includegraphics[width=0.66\textwidth]{shark.png}
+\end{center}
+
+\vspace*{2cm}
+
+Bela Julesz (a hungarian psychologist-engineer) claimed that
+``scientific bilingualism'' is the key to creative contributions to
+science.
+
+For example, random dot stereograms were invented by an engineer who
+knew that camouflage does not exist in 3D, contradicting psychological
+theories of stereopsis.
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{A bit of Epistemology can do no harm}
+
+\begin{itemize}
+
+\item Sometimes, When I read (neuro)cognitive papers, I miss behaviorism.
+
+\item Suggested Reading:\\ \quad Zolt\'an Dienes \emph{Understanding Psychology as a Science}
+
+\item This diagram may be banal, but worth showing anyway:
+
+\begin{center}
+\includegraphics[width=0.5\textwidth]{Diagram1.pdf}
+\end{center}
+
+
+Note: It is crucial that the prediction be made before the observation! (many papers are full of post-hoc explanations)
+
+\fontsize{8pt}{10}\selectfont
+
+\item Remark: To locate a failure in a broken equipment or debug a program, it is exactly the same approach. Yet, many people can't seem to follow the approach. See Tatham's \emph{How to Report Bugs Effectively}.
+
+\end{itemize}
+
+\end{frame}
+
+
+
+\end{document}

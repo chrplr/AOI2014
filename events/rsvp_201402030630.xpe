@@ -1,0 +1,9 @@
+#Expyriment  (Revision ; Python 2.7.3), .xpe-file
+#date: Mon Feb 03 2014 06:30:45
+#display: size=(800, 600), window_mode=True, opengl=False
+#os: ('Linux', 'is146569', '3.2.0-58-generic', '#88-Ubuntu SMP Tue Dec 3 17:37:58 UTC 2013', 'x86_64', 'x86_64')
+Time,Type,Event,Value,Detail,Detail2
+262,stderr,received,'Traceback (most recent call last):'
+262,stderr,received,'  File "rsvp.py", line 39, in <module>'
+262,stderr,received,'    for line in sequences:'
+262,stderr,received,"NameError: name 'sequences' is not defined"
