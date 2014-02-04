@@ -1,0 +1,344 @@
+DESCRIPTION DES ENSEMBLES DE DONNEES 
+
+Vous trouverez ci-dessous une description des ensembles de données extrait du livre de D.C. 
+HOWELL , quatrième édition que vous venez de télécharger. Il s'agit de presque tous les 
+données qui illustrent les différentes procédures d'analyses. Vous n'y trouverez toutefois pas 
+les très petits fichiers de données que vous pouvez introduire en moins de temps qu'il vous 
+faudrait pour les importer. Il y a des milliers de nombres, et il serait étonnant que ces fichiers ne 
+contiennent pas d'erreurs. Si vous en trouvez, avertissez Yves Bestgen ou D.C Howell s'il 
+vous plaît.
+
+Tous les fichiers de données ne sont pas décrits ci-dessous, le format de certains étant évident, 
+comme, par exemple, l'exercice 2.1 qui ne comporte qu'une seule variable. Les noms des 
+fichiers contenant les ensembles de données ont été construits d¹une manière évidente (Ex14-
+2.dat correspond à l'exercice 14.21 alors que Exh13-1.dat correspond à l'encart 13.1. Il va de 
+soi que ces fichiers peuvent être ouvert avec n'importe quel traitement de textes. La plupart des 
+fichiers, mais pas tous, contiennent une identification des sujets en colonne 1.
+
+
+Add.dat
+Les données de ce fichier proviennent d'une étude de Howell et Huessy (1985). Ces auteurs 
+ont rendu compte d'une étude portant sur 386 enfants qui avaient ou non manifesté, durant 
+l'enfance, des symptômes liés à des troubles de l'attention. Ces données sont décrites dans 
+l'appendice du livre.
+	Col  1 = Numéro d'identification du sujet
+	Col  2 = Moyenne des scores de troubles de l'attention sur 3 ans
+	Col  3 = Sexe. 1 = masculin; 2 = féminin
+	Col  4 = Nombre d'années scolaires que l'élève a doublées
+	Col  5 = QI calculé sur la base d'un test de QI administré au groupe
+	Col  6 = Niveau d'anglais: 1 = niveau préparatoire à l'université; 2 = niveau 
+moyen; 3 = rattrapage
+	Col  7 = Résultats obtenus en anglais: 4 = très bon; 3 = bon; etc.
+	Col  8 = Moyenne des points obtenus en neuvième année
+	Col  9 = Problèmes sociaux: 0 = non; 1 = oui
+	Col 10 = 1 = l'élève a quitté l'école avant son terme; 0 = l'élève a terminé l'école
+=
+
+BadCancr.dat
+Pour une description tant de l'étude qui sous-tend ces données que de l'ensemble de données, 
+voir la section suivante (Cancer.dat). Les données contenues dans ce fichier ne diffèrent des 
+données de Cancer.dat que par l'inclusion d'erreurs délibérées.
+
+Cancer.dat
+Les données incluses dans ce fichier proviennent d'une étude de Compas (1990, 
+communication personnelle) sur les effets du stress chez des patients cancéreux et leur famille.
+	Col  1 = Numéro d'identification famille
+	Col  2 = Sexe du patient (1 = masculin; 2 = féminin)
+	Col  3 = Score T de Somatisation du patient (plus élevé = plus grand nombre)
+	Col  4 = Score T de dépression  du patient
+	Col  5 = Score T d'angoisse du patient
+	Col  6 = Score T d'hostilité du patient
+	Col  7 = Score sur l'index global des symptômes du patient
+	Col  8 = Sexe du conjoint (1 = masculin; 2 = féminin)
+	Col  9 = Score T de somatisation du conjoint 
+	Col 10 = Score T de dépression du conjoint 
+	Col 11 = Score T d'angoisse du conjoint 
+	Col 12 = Score T d'hostilité du conjoint 
+	Col 13 = Score T sur l'index global des symptômes
+	Col 14 = Sexe de l'enfant (1 = masculin; 2 = féminin)
+	Col 15 = Sous-échelle d'intériorisation de l'enfant 
+	Col 16 = Sous-échelle d'extériorisation de l'enfant 
+	Col 17 = Problèmes comportementaux totaux de l'enfant 
+	Col 18 = Score T d'intériorisation de l'enfant 
+	Col 19 = Score T d'extériorisation de l'enfant 
+	Col 20 = Score T de problèmes comportementaux totaux de l'enfant 
+	
+Conti.dat
+	Les données complètes de l'étude de Conti et Musty (1984)
+	Tableau 11.4 et Tableau 11.5
+	Col 1 = Groupe (1 = Contrôle, ... 5 = 2 microgrammes)
+	Col 2 = Activité avant l'injection
+	Col 3 = Activité après l'injection
+	Col 4 = Après/Avant * 100
+
+DataSet.dat
+	Voir le fichier Add.dat ci-dessus
+	
+Epineq.dat
+	Données de Introini-Collison et McGaugh (1986)
+	Exercices 11.28 - 11.31
+	Col 1 = ID
+	Col 2 = Dosage (1 = 0.0 microgrammes/kg, ..., 3 = 1.0 microgrammes/kg)
+	Col 3 = Intervalle de rétention (1 = 1 jour, 2 = 1 semaine, 3 = 1 mois)
+	Col 4 = Nombre d'erreurs commises durant l'apprentissage de la seconde discrimination
+	
+Epinuneq.dat
+	Voir Epineq.dat
+	
+Ex6-37.dat
+	Données de Hout et al (1987) à propos de la satisfaction sexuelles des couples mariés.
+	Col 1 = Evaluation du mari (1 = Jamais, 2 = Assez souvent 3 = Très souvent, 4 = 
+Presque toujours
+	Col 2 = Evaluation de l'épouse
+	Col 3 = Fréquence par cellule
+
+Ex9-32.dat et Ex9-33.dat
+	Col 1 = Sexe ((1 = masculin; 2 = féminin)
+	Col 2 = Taille
+	Col 3 = Poids
+
+Ex9-39.dat
+	Données à propos de la qualité de l'air
+	Col 1 = Première mesure
+	Col 2 = Seconde mesure
+	Col 3 = Différence entre les mesures
+	Col 4 = Numéro de l'essai
+
+Ex11-28.dat
+	Voir Epinuneq.dat        
+
+Ex11-31.dat 
+	Voir Epineq.dat
+			
+Exh2-2.dat
+	Données sur le nombre de tics manifestés par un professeur (voir l¹encart 2.2).
+	Col 1 = nombre de tics.
+	
+Exh15-5.dat
+	Données pour la régression logistique représentée à la Fig 15.6 et à la base de l'encart 
+15.5
+	Col 1 = ID
+	Col 2 = Outcome (1 = Improved, 2 = Same or worse)
+	Col 3 = Survival rating
+	Col 4 = Prognosis
+	Col 5 = Amount of treatment
+	Col 6 = Global Symptom Index from BSI
+	Col 7 = Intrusive thoughts
+	Col 8 = Avoidance
+	
+Fig2-5.dat
+	Données de la figure 2.5 à propos des résultats obtenus lors d¹un cours de méthodes 
+expérimentales
+	Col 1 = Sexe (1 = masculin; 2 = féminin)
+	Col 2 = résultats
+
+Fig9-1a.dat
+	Données à propos de la mortalité infantines et du nombre de médecins
+	Col 1 = Nombre de médecin pour 10 000 personnes
+	Col 2 = Mortalité infantines  (ajustée)
+	Col 3 = Pays (une variable alphanumérique)
+
+Fig9-1b.dat
+	Données relatives à la relation entre l'espérance de vie et les dépenses en soins de santé 
+par habitant 
+	Col 1 = Pays
+	Col 2 = Espérance de vie en année
+	Col 3 = Dépenses en soins de santé par habitant
+
+Fig9-1c.dat
+	 Données à propos de la relation entre le cancer du sein et le rayonnement solaire.
+	Col 1 = Rayonnement solaire
+	Col 2 = Taux de cancer
+	Col 3 = Ville
+
+Fig9-7.dat
+	Données à propos de la taille et du poids par sexe
+	Col 1 = Sexe (1 = masculin; 2 = féminin)
+	Col 2 = Taille
+	Col 3 = Poids
+
+GrossWt.dat
+	Données d'une étude de Gross (1985) à propos de la boulimie. Il s'agit des données 
+originales. Les données du Tableau 7.7 ont été générées pour ressembler aux données 
+originales. D.C. HOWELL ne sait plus pourquoi les données originales ne sont pas reprises 
+dans le Tableau 7.7.
+	Col 1 = Groupe (1 = Simple, 2 = Vomissements)
+	Col 2 = Différence de poids
+
+Harass.dat
+	Données à propos du harassement sexuel pour l'exercice 15.31 (voir exercice 5.31)
+
+Mireault.dat
+	Données de Mireault (1990) à propos de l'impact de la mort d'un parent. Utilisées dans 
+de nombreux exercices.
+ 	Col  1  = Numéro d'identification du sujet
+ 	Col  2  = 1 = décès; 2 = mariés; 3 = divorce
+ 	Col  3  = Sexe. 1 = masculin; 2 = féminin
+ 	Col  4  = Année d'étude. 1 = première année; 2 = deuxième année; etc.
+ 	Col  5  = Type d'études. 1 = lettres et sciences; 2 = santé; 3 = ingénieur; 4 = 
+sciences économiques et/ou commerciales; 5 = agriculture
+ 	Col  6  = Moyenne des points obtenus. 4 = très bon; 3 = bon; 2 = satisfaisant; 1 = 
+passable; 0 = insuffisant
+ 	Col  7  = Sexe du parent décédé
+ 	Col  8  = Age de l'enfant lors du décès du parent
+ 	Col  9  = Score T de somatisation
+ 	Col 10 = Score T de comportements obsessionnels et compulsifs
+ 	Col 11 = Score T de sensibilité interpersonnelle
+ 	Col 12 = Score T de dépression
+ 	Col 13 = Score T d'angoisse
+ 	Col 14 = Score T d'hostilité
+ 	Col 15 = Score T d'angoisse phobique
+ 	Col 16 = Score T d'idées paranoïaques
+ 	Col 17 = Score T de comportements psychotiques
+ 	Col 18 = Score T sur l'index global des symptômes
+ 	Col 19 = Score total de vulnérabilité perçue
+ 	Col 20 = Score de vulnérabilité perçue aux pertes ultérieures
+ 	Col 21 = Score T de soutien social
+	
+RandUnif.dat and RandNorm.dat
+	10,000 nombres aléatoires compris entre 0 et 100.
+	Les données sont disposées en 10 colonnes de nombres à deux chiffres suivies d'un 
+seul chiffre, et le fichier de données comprend 1000 lignes.
+	Voir la description dans l'appendice.
+	
+Tab2-1.dat
+	Donnée du Tableau 2.1 à propos des temps de réactions dans une tâche d'identification 
+de lettres.
+	Col 1 = Observation
+	Col 2 = Temps de réaction
+	Col 3 = Nombre de chiffres inclus dans l'ensemble de comparaison
+	Col 4 = Présence ou absence du stimulus dans l'ensemble de comparaison (1 = Présent, 
+2 = Absent).
+	
+Tab2-6.dat
+	Données du Tableau 2.6 à propos de la beauté de visages après fusion de photos.
+	Col 1 = Numéro de la photo
+	Col 2 = Nombre de photos fusionnées (4 (1) or 32 (5) photos) 
+	Col 3 = Evaluation
+
+Tab2-10.dat
+	Données à propos de la durée d'hospitalisation de bébés nés à terme.
+	Col 1 = Identification
+	Col 2 = Durée de l'hospitalisation (en jours)
+	NOTE: Les données manquantes ont été omises afin d¹éviter des problèmes avec 
+certains logiciels statistiques.
+
+
+Tab6-3.dat
+	Données de Geller et al. (1976) à propos de la tendance à jeter des dépliants publicitaires 
+sur la voie publique. (Tableau 6.3)
+	Col 1 = Témoin (1) vs Message (2)
+	Col 2 = Poubelle (1) vs Jetés (2) vs Enlevés (3)
+	Col 3 = Fréquence de la cellule.
+
+Tab6-7.dat
+	Données hypothétiques pour calculer un accord entre des observateurs
+	Col 1 = Evaluation du Juge II (1 = Pas de problème, 2 = Intériorisation, 3 = 
+Extériorisation)
+	Col 2 = Evaluation du Juge I
+	Col 3 = Fréquence de la cellule.
+
+Tab7-1.dat
+	Données relatives à l'Index de développement psychomoteur extrait de Nurcombe et al. 
+(1984)
+	Col 1 = ID
+	Col 2 = Index de développement psychomoteur
+
+Tab7-3.dat
+	Données relatives à l'Index de développement mental (IDM) extrait de Nurcombe et al. 
+(1984)
+	Tableau 7.3
+	Col 1 = ID
+	Col 2 = Index de développement mental
+
+Tab7-5.dat
+	Données du groupe expérimental et du groupe témoin d'enfants PRN à 24 mois (scores 
+IDM)
+	Col 1 = ID
+	Col 2 = Groupe (1 = Expérimental, 2 = Contrôla)
+	Col 3 =  Index de développement mental
+
+Tab7-6.dat
+	Données du Tableau 7.6 à propos du rappel intentionnel de sujet jeunes et plus âgés
+	Col 1 = ID
+	Col 2 = Groupe (1 = Jeune, 2 = Agé)
+	Col 3 = nombre d'éléments rappelés
+	
+Tab 7-7.dat
+	Voir la description de GrossWt.dat
+
+Tab9-3.dat
+	Données sur le Stress et la santé mentale
+	Tableau 9.3
+	Col 1 = Stress (X)
+	Col 2 = Symptômes (Y)
+
+Tab9-7.dat
+	Données à propos du QI et du GPA
+	Col 1 = ID
+	Col 2 = QI
+	Col 3 = GPA
+
+Tab11-1.dat
+	Données de l'étude de Eysenck à propos du rappel de sujets âgés pour la réalisation 
+d'une ANOVA à un critère de classification
+	Col 1 = ID
+	Col 2 = Condition de rappel (1 = Addition, 2 = Rimes, 3 = Adjectifs, 4 = Images, 5 = 
+Intentionnel)
+	Col 3 = Nombre de mots rappelés
+
+Tab11.4 et Tab11.5 (ou Tab11.6)
+	Voir la description de Conti.dat plus haut.
+
+Tab12-1.dat
+	Données de l'étude de Siegel sur la tolérance à la morphine
+	Tableau 12.1
+	Col 1 = ID
+	Col 2 = Groupe (1 = M-S, 2 = M-M, 3 = S-S, 4 = S-M, 5 - Mc-M)
+	Col 3 = Latence
+
+Tab13-11.dat
+	Données de Klemchuk, Bond, & Howell (1990)
+	Tableau 13.11
+	Col 1 = Expérience en garderie (1 = Pas d¹expérience en garderie, 2 = Expérience en 
+garderie)
+	Col 2 = Age (1 = Plus jeune, 2 = Plus âgé)
+	Col 3 = Performances dans des tâches de prise de rôles
+
+Tab13-15.dat
+	Données de l'étude sur l'optimisme et la performance, inspirée d'un article de Seligman, 
+Nolen-Hoeksema, Thorton, & Thorton (1990) 
+	Tableau 13.15
+	Col 1 = Optimisme vs Pessimisme (1 = Optimistes, 2 = Pessimistes)
+	Col 2 = Sexe (1 = Masculin, 2 = féminin)
+	Col 3 = Epreuve (1 = )Libre, 2 = Brasse, 3 = Dos)
+	Col 4 = Rapport Temps2/Temps1
+	
+Tab14-7.dat
+	Données de King (1986) 
+	Tableau 14.4
+	Col 1 = Groupe
+	Col 2 = Intervalle 1
+	Col 3 = Intervalle 2
+	...
+	Col 7 = Intervalle 6
+
+Tab16-11.dat
+	Données à propos de la  performance en fonction du tabagisme pour l'étude de Spilich, 
+June, & Renner (1992)
+	Données corrigée  de la Table 16.11 
+		(La valeur pour la covariée de la cellule(2,1,2) est 154, et celle de la cellule 
+(3,2,1) est 93.
+	Col 1 = Tâche
+	Col 2 = Groupe
+	Col 3 = Erreurs
+	Col 4 = Score de distraction
+
+Tab17-8.dat
+	Données pour l¹exemple à trois dimensions à partir de l¹étude de Pugh (1984). Il y a une 
+ligne pour chaque cellule du tableau.
+	Col 1 = Coupable (1) vs Non coupable (2)
+	Col 2 = Faute grave (1) vs Faute légère (2)
+	Col 3 = Moralité (1 = Irréprochable, 2 = Neutre, 3 = Douteuse)
+	Col 4 = Fréquence
+

@@ -1,0 +1,24 @@
+The following errors have been deliberately added to the BadCancr.dat
+file.
+      In some cases the correct values can be inferred from adjacent lines
+      of data or logical guesses.  In other cases missing values must be
+      substituted.
+
+ 1.  Line 1        Contains Text  Delete line.
+ 		The file will not even load correctly into most programs
+ 		 until this correction is made.
+ 2.  Line 30       Missing data at end.  Set last three variables to missing.
+ 3.  Line 33       Delete extra space.
+ 4.  Line 53       Add space.
+ 5.  Line 53       SexParnt = 3.  Replace with 1. (SexSp was 2)
+ 6.  Line 53       GSITP = 0.  Replace with missing.
+ 7.  Line 54       InternT = -60 Replace with 60 or missing.
+ 8.  Line 54       DepT = 7.  Replace with missing.
+ 9.  Line 69       Replace 6_7 with missing.
+10.  Line 69       Sexparnt = 0.  Replace with 2. (SexSp was 1)
+11.  Line 70       Replace 6L with missing.
+12.  Line 73       Delete space.
+13.  Line 75       Replace space in Famnum with 1.
+14.  Line 77       Replace (one oh) with (one zero), or, better, missing.
+15.  Line 90       Replace 4b with missing.
+

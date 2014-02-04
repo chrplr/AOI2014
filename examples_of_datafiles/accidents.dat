@@ -1,0 +1,54 @@
+Ouvrier	Sexe	Travail	Accident
+
+# Un échantillon aléatoire simple de 22 femmes et 18 hommes, travaillant
+# dans une usine de matériel électrique, est observée pendant une
+# période de temps déterminée. A la fin de l observation, on note pour
+# chacun d eux s il a été ou non victime d un accident du travail. On
+# précise par ailleurs si la personne était soumise à un travail de jour
+# (diurne) ou un travail de nuit (nocturne).
+#
+# Remarque: Données fictives récupérées sur
+# http://www.ulb.ac.be/cours/vermandele/html/K2.pdf
+#
+# Fichier crée par Christophe.Pallier@m4x.org
+
+1	femme	diurne	Oui
+2	femme	diurne	Non
+3	femme	diurne	Non
+4	femme	diurne	Non
+5	femme	diurne	Non
+6	femme	diurne	Oui
+7	femme	diurne	Non
+8	femme	diurne	Non
+9	femme	diurne	Non
+10	femme	diurne	Non
+11	femme	nocturne	Oui
+12	femme	nocturne	Oui
+13	femme	nocturne	Oui
+14	femme	nocturne	Oui
+15	femme	nocturne	Non
+16	femme	nocturne	Oui
+17	femme	nocturne	Oui
+18	femme	nocturne	Oui
+19	femme	nocturne	Oui
+20	femme	nocturne	Oui
+21	femme	diurne	Non
+22	femme	diurne	Non
+23	homme	diurne	Non
+24	homme	diurne	Oui
+25	homme	diurne	Non
+26	homme	diurne	Oui
+27	homme	diurne	Non
+28	homme	diurne	Oui
+29	homme	diurne	Oui
+30	homme	diurne	Non
+31	homme	nocturne	Non
+32	homme	nocturne	Non
+33	homme	nocturne	Oui
+34	homme	nocturne	Non
+35	homme	nocturne	Oui
+36	homme	nocturne	Non
+37	homme	nocturne	Non
+38	homme	nocturne	Oui
+39	homme	nocturne	Non
+40	homme	nocturne	Oui
