@@ -1,0 +1,301 @@
+subj block task isi lagt2 t2in reponset1 reponset2 correct1 correct2
+mr1 a test 1 1 2 0 True False
+mr1 a test 3 1 4 1 True True
+mr1 a test 8 1 1 1 False True
+mr1 a test 0 0 4 0 True True
+mr1 a test 8 1 1 0 False False
+mr1 a test 0 0 4 1 False False
+mr1 a test 0 0 2 0 True True
+mr1 a test 1 1 4 0 True False
+mr1 a test 0 0 2 0 True True
+mr1 a test 1 1 2 0 True False
+mr1 a test 4 1 3 0 True False
+mr1 a test 3 1 4 0 True False
+mr1 a test 0 0 1 0 True True
+mr1 a test 0 0 4 4 False False
+mr1 a test 6 1 1 0 True False
+mr1 a test 7 1 3 0 True False
+mr1 a test 0 0 1 0 True True
+mr1 a test 0 0 3 1 True False
+mr1 a test 6 1 3 1 True True
+mr1 a test 2 1 3 0 True False
+mr1 a test 0 0 2 0 True True
+mr1 a test 7 1 3 1 True True
+mr1 a test 0 0 3 0 True True
+mr1 a test 0 0 3 0 True True
+mr1 a test 7 1 3 1 True True
+mr1 a test 5 1 2 0 True False
+mr1 a test 0 0 2 1 True False
+mr1 a test 1 1 1 1 True True
+mr1 a test 0 0 2 0 True True
+mr1 a test 6 1 4 1 True True
+mr1 a test 0 0 3 0 True True
+mr1 a test 2 1 1 0 True False
+mr1 a test 4 1 2 0 True False
+mr1 a test 3 1 4 0 True False
+mr1 a test 7 1 3 0 True False
+mr1 a test 6 1 4 1 True True
+mr1 a test 2 1 2 0 True False
+mr1 a test 0 0 4 0 False True
+mr1 a test 0 0 3 0 True True
+mr1 a test 8 1 4 0 True False
+mr1 a test 8 1 3 0 True False
+mr1 a test 3 1 1 1 True True
+mr1 a test 1 1 2 1 True True
+mr1 a test 1 1 1 0 True False
+mr1 a test 4 1 2 0 False False
+mr1 a test 0 0 2 0 True True
+mr1 a test 0 0 4 0 True True
+mr1 a test 7 1 3 1 True True
+mr1 a test 4 1 4 0 True False
+mr1 a test 1 1 3 1 True True
+mr1 a test 3 1 1 0 True False
+mr1 a test 0 0 4 0 True True
+mr1 a test 5 1 3 1 True True
+mr1 a test 4 1 4 0 True False
+mr1 a test 8 1 1 0 True False
+mr1 a test 8 1 1 0 True False
+mr1 a test 6 1 3 1 True True
+mr1 a test 6 1 3 1 True True
+mr1 a test 0 0 2 0 True True
+mr1 a test 4 1 1 1 True True
+mr1 a test 0 0 3 0 True True
+mr1 a test 7 1 2 0 True False
+mr1 a test 7 1 2 0 True False
+mr1 a test 8 1 2 1 True True
+mr1 a test 8 1 1 1 True True
+mr1 a test 4 1 2 0 False False
+mr1 a test 7 1 3 1 True True
+mr1 a test 0 0 4 0 True True
+mr1 a test 0 0 2 0 True True
+mr1 a test 5 1 4 1 True True
+mr1 a test 0 0 4 0 True True
+mr1 a test 5 1 1 0 True False
+mr1 a test 0 0 3 0 True True
+mr1 a test 0 0 3 0 True True
+mr1 a test 1 1 3 0 True False
+mr1 a test 5 1 4 0 True False
+mr1 a test 2 1 2 0 True False
+mr1 a test 0 0 4 0 True True
+mr1 a test 7 1 4 1 True True
+mr1 a test 0 0 1 0 True True
+mr1 a test 2 1 3 0 True False
+mr1 a test 4 1 2 0 True False
+mr1 a test 1 1 2 1 True True
+mr1 a test 3 1 3 0 True False
+mr1 a test 5 1 1 1 True True
+mr1 a test 6 1 2 1 True True
+mr1 a test 3 1 3 1 True True
+mr1 a test 0 0 2 0 True True
+mr1 a test 0 0 1 0 True True
+mr1 a test 5 1 2 1 True True
+mr1 a test 4 1 3 0 True False
+mr1 a test 3 1 4 0 True False
+mr1 a test 5 1 2 0 True False
+mr1 a test 0 0 3 0 True True
+mr1 a test 2 1 2 0 True False
+mr1 a test 2 1 1 0 True False
+mr1 a test 6 1 2 1 True True
+mr1 a test 0 0 3 0 True True
+mr1 a test 3 1 3 1 True True
+mr1 a test 0 0 4 0 True True
+mr1 a test 0 0 2 0 True True
+mr1 a test 5 1 4 0 True False
+mr1 a test 0 0 4 0 True True
+mr1 a test 0 0 2 0 True True
+mr1 a test 8 1 3 0 True False
+mr1 a test 1 1 1 1 True True
+mr1 a test 2 1 1 0 True False
+mr1 a test 2 1 4 0 True False
+mr1 a test 6 1 3 0 True False
+mr1 a test 0 0 3 0 True True
+mr1 a test 5 1 2 1 True True
+mr1 a test 0 0 4 0 True True
+mr1 a test 7 1 3 1 True True
+mr1 a test 4 1 1 0 True False
+mr1 a test 0 0 3 0 True True
+mr1 a test 0 0 3 0 True True
+mr1 a test 2 1 4 0 True False
+mr1 a test 3 1 1 1 True True
+mr1 a test 8 1 2 1 True True
+mr1 a test 6 1 1 0 True False
+mr1 a training 150 2 1 1 1 True True
+mr1 a training 150 3 1 3 1 True True
+mr1 a training 150 2 1 1 1 True True
+mr1 a training 150 1 1 3 0 True False
+mr1 a training 150 1 1 2 0 True False
+mr1 a training 150 1 1 1 0 True False
+mr1 a training 150 2 1 4 0 True False
+mr1 a training 150 2 1 1 1 True True
+mr1 a training 150 2 0 1 0 True True
+mr1 a training 150 1 1 3 1 True True
+mr1 a training 150 3 1 1 1 True True
+mr1 a training 150 1 1 4 0 True False
+mr1 a training 150 1 1 4 0 True False
+mr1 a training 150 2 0 4 0 True True
+mr1 a training 150 3 1 4 1 True True
+mr1 a training 150 2 1 1 0 True False
+mr1 a training 150 1 1 4 0 True False
+mr1 a training 150 2 1 1 1 True True
+mr1 a training 150 3 1 2 0 True False
+mr1 a training 150 3 1 4 1 True True
+mr1 a training 150 1 1 2 0 True False
+mr1 a training 125 2 1 2 0 True False
+mr1 a training 125 2 1 4 0 True False
+mr1 a training 125 3 0 3 0 True True
+mr1 a training 125 3 1 2 0 True False
+mr1 a training 125 1 0 3 0 True True
+mr1 a training 125 1 1 4 1 True True
+mr1 a training 125 1 0 2 0 True True
+mr1 a training 125 3 1 4 0 True False
+mr1 a training 125 3 0 2 0 True True
+mr1 a training 125 3 1 3 1 True True
+mr1 a training 125 2 0 2 0 True True
+mr1 a training 125 2 1 3 1 True True
+mr1 a training 125 3 1 4 1 True True
+mr1 a training 125 3 1 4 1 True True
+mr1 a training 125 1 1 1 1 True True
+mr1 a training 125 2 1 3 1 True True
+mr1 a training 125 1 1 3 1 True True
+mr1 a training 125 2 1 2 1 True True
+mr1 a training 125 2 1 3 1 True True
+mr1 a training 125 2 1 2 0 True False
+mr1 a training 125 3 1 2 1 True True
+mr1 a training 125 1 1 2 1 True True
+mr1 a training 125 2 0 3 0 True True
+mr1 a training 125 1 1 1 1 True True
+mr1 a training 125 3 1 4 1 True True
+mr1 a training 125 2 0 1 0 True True
+mr1 a training 125 3 1 1 1 True True
+mr1 a training 125 1 1 1 1 True True
+mr1 a training 125 3 0 3 0 True True
+mr1 a training 125 1 1 3 1 True True
+mr1 a training 125 3 1 3 1 True True
+mr1 a training 125 3 1 4 0 True False
+mr1 a training 125 2 0 4 0 True True
+mr1 a training 125 1 1 1 1 True True
+mr1 a training 125 3 1 3 1 True True
+mr1 a training 125 3 1 3 1 True True
+mr1 a training 125 2 1 1 1 True True
+mr1 a training 125 3 0 4 0 True True
+mr1 a training 125 2 1 1 1 True True
+mr1 a retest 1 1 1 1 True True
+mr1 a retest 3 1 3 1 True True
+mr1 a retest 8 1 3 1 True True
+mr1 a retest 0 0 2 0 True True
+mr1 a retest 8 1 2 1 True True
+mr1 a retest 0 0 1 0 True True
+mr1 a retest 0 0 2 0 True True
+mr1 a retest 1 1 4 1 True True
+mr1 a retest 0 0 4 0 True True
+mr1 a retest 1 1 3 1 True True
+mr1 a retest 4 1 3 1 True True
+mr1 a retest 3 1 3 1 True True
+mr1 a retest 0 0 4 0 True True
+mr1 a retest 0 0 4 0 True True
+mr1 a retest 6 1 1 1 True True
+mr1 a retest 7 1 2 1 True True
+mr1 a retest 0 0 3 0 True True
+mr1 a retest 0 0 3 0 True True
+mr1 a retest 6 1 3 1 True True
+mr1 a retest 2 1 1 0 True False
+mr1 a retest 0 0 3 1 True False
+mr1 a retest 7 1 2 1 True True
+mr1 a retest 0 0 4 0 True True
+mr1 a retest 0 0 2 0 True True
+mr1 a retest 7 1 2 1 True True
+mr1 a retest 5 1 4 0 True False
+mr1 a retest 0 0 4 0 True True
+mr1 a retest 1 1 3 1 True True
+mr1 a retest 0 0 3 0 True True
+mr1 a retest 6 1 1 1 True True
+mr1 a retest 0 0 3 0 True True
+mr1 a retest 2 1 2 1 True True
+mr1 a retest 4 1 4 0 True False
+mr1 a retest 3 1 4 1 True True
+mr1 a retest 7 1 1 1 True True
+mr1 a retest 6 1 2 1 True True
+mr1 a retest 2 1 1 1 True True
+mr1 a retest 0 0 2 0 True True
+mr1 a retest 0 0 2 1 True False
+mr1 a retest 8 1 1 1 True True
+mr1 a retest 8 1 1 1 True True
+mr1 a retest 3 1 3 0 True False
+mr1 a retest 1 1 3 1 True True
+mr1 a retest 1 1 3 1 True True
+mr1 a retest 4 1 4 1 True True
+mr1 a retest 0 0 3 0 True True
+mr1 a retest 0 0 3 0 True True
+mr1 a retest 7 1 4 1 True True
+mr1 a retest 4 1 1 1 True True
+mr1 a retest 1 1 1 1 True True
+mr1 a retest 3 1 1 0 True False
+mr1 a retest 0 0 4 0 True True
+mr1 a retest 5 1 4 0 True False
+mr1 a retest 4 1 4 0 True False
+mr1 a retest 8 1 3 0 True False
+mr1 a retest 8 1 4 1 True True
+mr1 a retest 6 1 2 1 True True
+mr1 a retest 6 1 4 1 True True
+mr1 a retest 0 0 3 0 True True
+mr1 a retest 4 1 2 1 True True
+mr1 a retest 0 0 2 0 True True
+mr1 a retest 7 1 1 1 True True
+mr1 a retest 7 1 2 1 True True
+mr1 a retest 8 1 4 1 True True
+mr1 a retest 8 1 4 1 True True
+mr1 a retest 4 1 3 1 True True
+mr1 a retest 7 1 2 1 True True
+mr1 a retest 0 0 3 0 True True
+mr1 a retest 0 0 4 1 True False
+mr1 a retest 5 1 1 1 True True
+mr1 a retest 0 0 4 1 True False
+mr1 a retest 5 1 1 1 True True
+mr1 a retest 0 0 4 0 True True
+mr1 a retest 0 0 3 0 True True
+mr1 a retest 1 1 4 1 True True
+mr1 a retest 5 1 2 1 True True
+mr1 a retest 2 1 2 1 True True
+mr1 a retest 0 0 4 0 True True
+mr1 a retest 7 1 4 1 True True
+mr1 a retest 0 0 1 0 True True
+mr1 a retest 2 1 1 1 True True
+mr1 a retest 4 1 3 1 True True
+mr1 a retest 1 1 4 1 True True
+mr1 a retest 3 1 1 1 True True
+mr1 a retest 5 1 1 1 True True
+mr1 a retest 6 1 4 1 True True
+mr1 a retest 3 1 3 0 True False
+mr1 a retest 0 0 4 0 True True
+mr1 a retest 0 0 3 0 True True
+mr1 a retest 5 1 4 1 True True
+mr1 a retest 4 1 1 1 True True
+mr1 a retest 3 1 2 1 True True
+mr1 a retest 5 1 3 1 True True
+mr1 a retest 0 0 2 0 False True
+mr1 a retest 2 1 3 0 True False
+mr1 a retest 2 1 1 0 True False
+mr1 a retest 6 1 1 1 True True
+mr1 a retest 0 0 1 0 True True
+mr1 a retest 3 1 2 0 True False
+mr1 a retest 0 0 4 0 True True
+mr1 a retest 0 0 1 0 True True
+mr1 a retest 5 1 3 1 True True
+mr1 a retest 0 0 3 0 True True
+mr1 a retest 0 0 3 0 True True
+mr1 a retest 8 1 1 1 True True
+mr1 a retest 1 1 2 1 True True
+mr1 a retest 2 1 1 1 True True
+mr1 a retest 2 1 3 1 True True
+mr1 a retest 6 1 4 1 True True
+mr1 a retest 0 0 2 1 True False
+mr1 a retest 5 1 1 1 True True
+mr1 a retest 0 0 2 1 True False
+mr1 a retest 7 1 4 1 True True
+mr1 a retest 4 1 3 1 True True
+mr1 a retest 0 0 4 0 True True
+mr1 a retest 0 0 2 0 True True
+mr1 a retest 2 1 3 0 True False
+mr1 a retest 3 1 3 0 True False
+mr1 a retest 8 1 4 1 True True
+mr1 a retest 6 1 1 1 True True
