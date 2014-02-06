@@ -6,15 +6,59 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
-  <title></title>
+  <meta name="author" content="Christophe Pallier" />
+  <title>Activities for the AOI</title>
   <link rel="stylesheet" type="text/css" media="screen, projection, print"
     href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
   <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js.gz"
     charset="utf-8" type="text/javascript"></script>
 </head>
 <body>
-<div class="section slide level2" id="section">
-<h1 id="section"></h1>
+<div class="slide titlepage">
+  <h1 class="title">Activities for the AOI</h1>
+  <p class="author">
+Christophe Pallier
+  </p>
+  <p class="date">Feb. 2014</p>
+</div>
+<div class="section slide level2" id="preparing-experiments">
+<h1 id="preparing-experiments">Preparing experiments</h1>
+<ul>
+<li><p>For an experiment, your research assistant has created lists of stimuli for each participant (files list_XXXX.csv). He was asked to avoid any repetition of stimuli within a list. Detect if the files contain any repetition (and print them).</p></li>
+<li><p>You have been given a Python script that displays sentences words by word <a href="rsvp.py">rsvp.py</a>. Install the expyriment module for python and run the script. Can you do something so that sentences are presented as a whole rather than word by word?</p></li>
+<li><p>For a fMRI &quot;language localizer&quot;, participants will read a series of sentences (from the file <a href="sentences.txt">sentences.txt</a>). To create a low-level baseline, you must create matched &quot;pseudosentences&quot; where each word is replaced by a pseudoword of the same length, containing the same letters, but in a random order.</p></li>
+<li><p>Learn about <a href="http://www.regular-expressions.info/">regular expressions</a>. To study the orthographic structure of French, we would like to list all possible sequences of vowels and all sequences of consonants. You can use the list of French words available [here]http://www.pallier.org/ressources/dicofr/dicofr.html).</p></li>
+<li><p>Gabor patterns are widely used in vision research (see file GaborArray.jpg). Write a program that generates a series of Gabor patterns of various orientation and frequencies (to select relevant values, see Foley et al. (2007) Detection of Gabor Patterns of Different Sizes, Shapes, Phases and Eccentricities, Vision Research.)</p></li>
+<li><p>To probe basic auditory perception, one can present pure tones embedded in white noise. Create a one second segement of white noise, and add on top of it pure tones of 200ms of varying frequencies and amplitudes. Each stimuli must be saved in a different wav file. These stimuli could be used to determine thresholds of perception by frequencies.</p></li>
+</ul>
+</div>
+<div class="section slide level2" id="data-analysis">
+<h1 id="data-analysis">Data Analysis</h1>
+<ul>
+<li><p>Using the read.table function of R, import the various datasets in examples_of_datafiles: rhume, family, chiens, accidents, sommeil, neglige1, pedago, wisc, conjoint, a2p2pond (read the associated doc file first! Note: you may have to recreate missing variables).</p></li>
+<li><p>The a*.dat files in examples_of_datafiles come from different subjects. Import them in a single data.frame in R with a column 'subject' and a column 'data'. Plot an histogram of the average scores of subjects (not the raw scores; you can use the tapply or aggregate command to compute the averages per subjects.</p></li>
+<li><p>Import the repository https://github.com/chrplr/statistics_with_R. Using rstudio, execute the following Rmd files step by step to try and understand them:</p></li>
+</ul>
+<p>comparing-two-means-independent-groups.Rmd<br />comparing-the-means-several-independent-groups.Rmd<br />comparing-the-means-several-conditions.Rmd comparing-two-proportions-independent-groups.Rmd factorial_anova.Rmd</p>
+<ul>
+<li><p>You have received data from an experiment (file Data-Experiment1.csv), in which subjects were tested under two conditions (A and B). There reaction times and error rates were measured. You must analyse these data (that is, decide whether it supports the idea that one condition is more difficult than the other).</p></li>
+<li><p>Check AE Experiment and vision_locale_globale. Attempt to import &amp; plot data.</p></li>
+<li><p>Import Lexique380.txt and the plot the distribution of frequencies in books.</p></li>
+</ul>
+</div>
+<div class="section slide level2" id="simulations">
+<h1 id="simulations">Simulations</h1>
+<ul>
+<li><p>Compute (and plot) the probability that a two samples T test detects a significant difference between two groups of size N for different normalized effect sizes (Cohen's effect size ranging from 0.1 to 2).</p></li>
+<li><p>Write a program to study the behavior on 1-dimensional Elementary Cellular Automata described on wikipedia (http://en.wikipedia.org/wiki/Cellular_automaton)</p></li>
+</ul>
+</div>
+<div class="section slide level2" id="explorations">
+<h1 id="explorations">Explorations</h1>
+<ul>
+<li><p>Learn about <a href="en.wikipedia.org/wiki/Zipf&#39;s_law">Zipf's law</a>. Download the text of a long document (e.g., <a href="http://www.pallier.org/cours/AIP2013/alice.txt">Alice in Wonderland</a> ). Create the graphics showing the frequency of occurrence of words as a function of their rank. Plot also the relationship between word length and frequency (relevance to Cognition: see Piantadosi, Tily, Gibson (2011) Word lengths are optimized for efficient communication)</p></li>
+<li><p>Read about Benford's law, on <a href="http://en.wikipedia.org/wiki/Benford%27s_law">wikipedia</a> and <a href="http://mathworld.wolfram.com/BenfordsLaw.html">here</a>. Find a large dataset of numbers on the web (e.g. population of cities) and check of Benford law applies. (For relevance to Cognition, see Dehaene, S. and Mehler, J. (1992) Cross-linguistic regularities in the frequency of number words. Cognition, 43, 1–29.)</p></li>
+</ul>
 <p>/* slidy.css</p>
 <p>Copyright (c) 2005-2010 W3C (MIT, ERCIM, Keio), All Rights Reserved. W3C liability, trademark, document use and software licensing rules apply, see:</p>
 <p>http://www.w3.org/Consortium/Legal/copyright-documents http://www.w3.org/Consortium/Legal/copyright-software */ body { margin: 0 0 0 0; padding: 0 0 0 0; width: 100%; height: 100%; color: black; background-color: white; font-family: &quot;Gill Sans MT&quot;, &quot;Gill Sans&quot;, GillSans, sans-serif; font-size: 14pt; }</p>
@@ -70,39 +114,6 @@
 <p>div.slide.hidden { display: block; visibility: visible } div.handout.hidden { display: block; visibility: visible } div.background { display: none; visibility: hidden } body.single_slide div.initial_prompt { display: block; visibility: visible } body.single_slide div.background { display: block; visibility: visible } body.single_slide div.background.hidden { display: none; visibility: hidden } body.single_slide .invisible { visibility: hidden } body.single_slide .hidden { display: none; visibility: hidden } body.single_slide div.slide { position: absolute } body.single_slide div.handout { display: none; visibility: hidden } }</p>
 <p>@media print { .hidden { display: block; visibility: visible }</p>
 <p>div.slide pre { font-size: 60%; padding-left: 0.5em; } div.toolbar { display: none; visibility: hidden; } div.slidy_toc { display: none; visibility: hidden; } div.background { display: none; visibility: hidden; } div.slide { page-break-before: always } /* :first-child isn't reliable for print media */ div.slide.first-slide { page-break-before: avoid } }</p>
-<p>% Activities for the AOI % Christophe Pallier % Feb. 2014</p>
-</div>
-<div class="section slide level2" id="preparing-experiments">
-<h1 id="preparing-experiments">Preparing experiments</h1>
-<ul>
-<li><p>For an experiment, your research assistant has created lists of stimuli for each participant (files list_XXXX.csv). He was asked to avoid any repetition of stimuli within a list. Detect if the files contain any repetition (and print them).</p></li>
-<li><p>You have been given a Python script that displays sentences words by word <a href="rsvp.py">rsvp.py</a>. Install the expyriment module for python and run the script. Can you do something so that sentences are presented as a whole rather than word by word?</p></li>
-<li><p>For a fMRI &quot;language localizer&quot;, participants will read a series of sentences (from the file <a href="sentences.txt">sentences.txt</a>). To create a low-level baseline, you must create matched &quot;pseudosentences&quot; where each word is replaced by a pseudoword of the same length, containing the same letters, but in a random order.</p></li>
-<li><p>Learn about <a href="http://www.regular-expressions.info/">regular expressions</a>. To study the orthographic structure of French, we would like to list all possible sequences of vowels and all sequences of consonants. You can use the list of French words available [here]http://www.pallier.org/ressources/dicofr/dicofr.html).</p></li>
-<li><p>Gabor patterns are widely used in vision research (see file GaborArray.jpg). Write a program that generates a series of Gabor patterns of various orientation and frequencies (to select relevant values, see Foley et al. (2007) Detection of Gabor Patterns of Different Sizes, Shapes, Phases and Eccentricities, Vision Research.)</p></li>
-<li><p>To probe basic auditory perception, one can present pure tones embedded in white noise. Create a one second segement of white noise, and add on top of it pure tones of 200ms of varying frequencies and amplitudes. Each stimuli must be saved in a different wav file. These stimuli could be used to determine thresholds of perception by frequencies.</p></li>
-</ul>
-</div>
-<div class="section slide level2" id="data-analysis">
-<h1 id="data-analysis">Data Analysis</h1>
-<ul>
-<li>You have received data from an experiment (file Data-Experiment1.csv), in which subjects were tested under two conditions (A and B). There reaction times and error rates were measured. You must analyse these data (that is, decide whether it supports the idea that one condition is more difficult than the other).</li>
-</ul>
-<p>YOUR OWN DATA HERE!!!</p>
-</div>
-<div class="section slide level2" id="simulations">
-<h1 id="simulations">Simulations</h1>
-<ul>
-<li><p>Compute (and plot) the probability that a two samples T test detects a significant difference between two groups of size N for different normalized effect sizes (Cohen's effect size ranging from 0.1 to 2).</p></li>
-<li><p>Write a program to study the behavior on 1-dimensional Elementary Cellular Automata described on wikipedia (http://en.wikipedia.org/wiki/Cellular_automaton)</p></li>
-</ul>
-</div>
-<div class="section slide level2" id="exploring-some-ideas">
-<h1 id="exploring-some-ideas">Exploring some ideas</h1>
-<ul>
-<li><p>Learn about <a href="en.wikipedia.org/wiki/Zipf&#39;s_law">Zipf's law</a>. Download the text of a long document (e.g., <a href="http://www.pallier.org/cours/AIP2013/alice.txt">Alice in Wonderland</a> ). Create the graphics showing the frequency of occurrence of words as a function of their rank. Plot also the relationship between word length and frequency (relevance to Cognition: see Piantadosi, Tily, Gibson (2011) Word lengths are optimized for efficient communication)</p></li>
-<li><p>Read about Benford's law, on <a href="http://en.wikipedia.org/wiki/Benford%27s_law">wikipedia</a> and <a href="http://mathworld.wolfram.com/BenfordsLaw.html">here</a>. Find a large dataset of numbers on the web (e.g. population of cities) and check of Benford law applies. (For relevance to Cognition, see Dehaene, S. and Mehler, J. (1992) Cross-linguistic regularities in the frequency of number words. Cognition, 43, 1–29.)</p></li>
-</ul>
 </div>
 </body>
 </html>

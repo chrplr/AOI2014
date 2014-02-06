@@ -24,9 +24,24 @@ Write a program that generates a series of Gabor patterns of various orientation
 Data Analysis
 -------------
 
+* Using the read.table function of R, import the various datasets in examples_of_datafiles: rhume, family, chiens, accidents, sommeil, neglige1, pedago, wisc, conjoint, a2p2pond (read the associated doc file first! Note: you may have to recreate missing variables).
+
+* The a*.dat files in examples_of_datafiles come from different subjects. Import them in a single data.frame in R with a column 'subject' and a column 'data'. Plot an histogram of the average scores of subjects (not the raw scores; you can use the tapply or aggregate command to compute the averages per subjects.  
+
+* Import the repository https://github.com/chrplr/statistics_with_R. Using rstudio, execute the following Rmd files step by step to try and understand them: 
+
+comparing-two-means-independent-groups.Rmd  
+comparing-the-means-several-independent-groups.Rmd      
+comparing-the-means-several-conditions.Rmd 
+comparing-two-proportions-independent-groups.Rmd
+factorial_anova.Rmd
+
+
 * You have received data from an experiment (file Data-Experiment1.csv), in which subjects were tested under two conditions (A and B). There reaction times and error rates were measured. You must analyse these data (that is, decide whether it supports the idea that one condition is more difficult than the other).
 
-* YOUR OWN DATA HERE!
+* Check AE Experiment and vision_locale_globale. Attempt to import & plot data. 
+
+* Import Lexique380.txt and the plot the distribution of frequencies in books.
 
 Simulations
 -----------
