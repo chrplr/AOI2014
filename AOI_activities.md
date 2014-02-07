@@ -36,10 +36,9 @@ comparing-the-means-several-conditions.Rmd
 comparing-two-proportions-independent-groups.Rmd
 factorial_anova.Rmd
 
-
 * You have received data from an experiment (file Data-Experiment1.csv), in which subjects were tested under two conditions (A and B). There reaction times and error rates were measured. You must analyse these data (that is, decide whether it supports the idea that one condition is more difficult than the other).
 
-* Check AE Experiment and vision_locale_globale. Attempt to import & plot data. 
+* Check the three folders ShadokData, AEexperiment and vision_locale_globale. Attempt to import the data.
 
 * Import Lexique380.txt and the plot the distribution of frequencies in books.
 
