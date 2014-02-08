@@ -1,0 +1,61 @@
+Analyse de Data-Experiment1
+===========================
+
+
+```{r}
+exp1 <- read.csv('Data-Experiment1.csv')
+str(exp1)
+```
+
+On compte le nombre de sujets, le nombre de données par sujet, on cherche la relation entre sujet et condition..
+
+```{r}
+nlevels(exp1$Subject)
+table(exp1$Subject)
+table(exp1$Subject, exp1$Cond)
+```
+
+
+On cherche les pourcentages de réponses correctes par sujet
+
+```{r}
+mean(exp1$Hit)
+hist(with(exp1, tapply(Hit, Subject, mean)),nclass=10)
+```
+
+
+On inspecte les temps de réaction
+
+```{r}
+hist(exp1$RT[exp1$Hit==1], nclass=25)
+rug(exp1$RT[exp1$Hit==1])
+```
+
+```{r}
+exp1clean <- subset(exp1, Hit==1)
+nrow(exp1clean)
+```
+
+
+On calcule, pour chaque sujet, le temps de réaction moyen sur les essais corrects
+
+
+```{r}
+sumdata <- with(exp1clean, aggregate(RT, list(Subject=Subject, Cond=Cond), mean))
+```
+
+
+On regarde l'effet de Cond. 
+
+```{r}
+with(sumdata, tapply(x, Cond, mean))
+
+with(sumdata, summary(aov(x~Cond+Error(Subject/Cond))))
+with(sumdata, t.test(x~Cond, paired=T))
+
+```
+
+
+
+
+
